@@ -1,122 +1,118 @@
+// components/Header.tsx
+"use client";
+
 import Link from "next/link";
-// import Image from "next/image";
+import { Menu, Instagram, Youtube, Send } from "lucide-react";
+import { useState } from "react";
 
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
-  FaTelegram,
-  FaYoutube,
-} from "react-icons/fa";
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-const Header: React.FC = () => {
   return (
-    <header className="fixed w-full bg-white shadow-lg z-50 py-4 px-6">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-4 md:mb-0">
-          <Link href="/">
-            {/* <Image
-              src="/images/truckstaff-logo.png"
-              alt="TruckStaff Solutions"
-              width={240}
-              height={60}
-              className="cursor-pointer"
-            /> */}
-            <p className="text-3xl text-orange-500 font-bold transition-all">
-              Logo
-            </p>
+    <header className="w-full bg-gray-800 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="flex items-center">
+          <Link href="/" className="text-xl font-bold">
+            Vabank MC
           </Link>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center">
-          <nav className="mb-4 md:mb-0 mr-0 md:mr-6">
-            <ul className="flex space-x-6">
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-700 hover:text-orange-500 font-medium"
-                >
-                  Our Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-700 hover:text-orange-500 font-medium"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-700 hover:text-orange-500 font-medium"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-700 hover:text-orange-500 font-medium"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-orange-500 font-medium"
-                >
-                  English
-                </Link>
-              </li>
-            </ul>
-          </nav>
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden flex items-center"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <Menu size={24} />
+        </button>
 
-          <div className="flex space-x-3">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link href="/about" className="hover:text-blue-300 transition">
+            About us
+          </Link>
+          <Link href="/services" className="hover:text-blue-300 transition">
+            Services
+          </Link>
+          <Link href="/location" className="hover:text-blue-300 transition">
+            Location
+          </Link>
+          <Link href="/contacts" className="hover:text-blue-300 transition">
+            Contacts
+          </Link>
+          <div className="flex space-x-4">
             <Link
-              href="#"
-              className="bg-gray-200 p-2 rounded-md hover:bg-gray-300"
+              href="https://instagram.com"
+              className="hover:text-blue-300 transition"
             >
-              <FaFacebookF className="text-gray-700" />
+              <Instagram size={20} />
             </Link>
             <Link
-              href="#"
-              className="bg-gray-200 p-2 rounded-md hover:bg-gray-300"
+              href="https://youtube.com"
+              className="hover:text-blue-300 transition"
             >
-              <FaInstagram className="text-gray-700" />
+              <Youtube size={20} />
             </Link>
             <Link
-              href="#"
-              className="bg-gray-200 p-2 rounded-md hover:bg-gray-300"
+              href="https://t.me"
+              className="hover:text-blue-300 transition"
             >
-              <FaLinkedinIn className="text-gray-700" />
-            </Link>
-            <Link
-              href="#"
-              className="bg-gray-200 p-2 rounded-md hover:bg-gray-300"
-            >
-              <FaWhatsapp className="text-gray-700" />
-            </Link>
-            <Link
-              href="#"
-              className="bg-gray-200 p-2 rounded-md hover:bg-gray-300"
-            >
-              <FaTelegram className="text-gray-700" />
-            </Link>
-            <Link
-              href="#"
-              className="bg-gray-200 p-2 rounded-md hover:bg-gray-300"
-            >
-              <FaYoutube className="text-gray-700" />
+              <Send size={20} />
             </Link>
           </div>
-        </div>
+        </nav>
+
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-16 left-0 w-full bg-gray-800 shadow-lg md:hidden z-50">
+            <div className="flex flex-col p-4">
+              <Link
+                href="/about"
+                className="py-2 hover:text-blue-300 transition"
+              >
+                About us
+              </Link>
+              <Link
+                href="/services"
+                className="py-2 hover:text-blue-300 transition"
+              >
+                Services
+              </Link>
+              <Link
+                href="/location"
+                className="py-2 hover:text-blue-300 transition"
+              >
+                Location
+              </Link>
+              <Link
+                href="/contacts"
+                className="py-2 hover:text-blue-300 transition"
+              >
+                Contacts
+              </Link>
+              <div className="flex space-x-4 py-2">
+                <Link
+                  href="https://instagram.com"
+                  className="hover:text-blue-300 transition"
+                >
+                  <Instagram size={20} />
+                </Link>
+                <Link
+                  href="https://youtube.com"
+                  className="hover:text-blue-300 transition"
+                >
+                  <Youtube size={20} />
+                </Link>
+                <Link
+                  href="https://t.me"
+                  className="hover:text-blue-300 transition"
+                >
+                  <Send size={20} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
-};
-
-export default Header;
+}

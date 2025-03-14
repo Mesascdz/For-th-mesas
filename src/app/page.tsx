@@ -1,31 +1,27 @@
-// pages/index.tsx (updated)
-import type { NextPage } from "next";
-import Head from "next/head";
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import OurServices from "@/components/OurServices";
-import CoreCompetencies from "@/components/CoreCompetencies";
+"use client";
 
-const Home: NextPage = () => {
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Hero from "../components/Hero";
+import BuyOrSell from "../components/BuyOrSell";
+import SoldItems from "../components/SoldItems";
+import PartnersSection from "../components/PartnersSection";
+
+export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
   return (
-    <div>
-      <Head>
-        <title>TruckStaff - Solutions for Your Truckload Business</title>
-        <meta
-          name="description"
-          content="Trucking industry focused consultancy offering full-scale solutions and support to trucking businesses."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Header />
-      <HeroSection />
-      <OurServices />
-      <CoreCompetencies />
-
-      {/* Other sections will be added here */}
-    </div>
+    <main className="min-h-screen bg-gray-50">
+      <Hero />
+      <BuyOrSell />
+      <SoldItems />
+      <PartnersSection />
+    </main>
   );
-};
-
-export default Home;
+}
