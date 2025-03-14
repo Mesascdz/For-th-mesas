@@ -17,7 +17,7 @@ export default function SoldItems() {
   const [totalSlides, setTotalSlides] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const [viewportWidth, setViewportWidth] = useState(0);
+  // const [viewportWidth, setViewportWidth] = useState(0);
 
   // Sample company data - replace with your actual companies
   const companies: Company[] = [
@@ -50,7 +50,7 @@ export default function SoldItems() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      setViewportWidth(width);
+      // setViewportWidth(width);
 
       if (width < 640) {
         setItemsPerSlide(2);
