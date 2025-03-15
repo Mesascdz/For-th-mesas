@@ -150,7 +150,7 @@ export default function SoldItems() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-800 to-gray-900">
+    <section className="py-16 bg-gradient-to-b bg-black text-white to-gray-900">
       <div
         ref={containerRef}
         className="container mx-auto px-4 max-w-4xl"
@@ -158,7 +158,7 @@ export default function SoldItems() {
         data-aos-delay="100"
       >
         <div className="bg-gradient-to-br from-gray-800 to-gray-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-[#2563EB]">
             We Sold these MC, DOT with Amazon
           </h2>
 
@@ -256,7 +256,7 @@ export default function SoldItems() {
                   onClick={() => goToSlide(index)}
                   className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                     currentIndex === index
-                      ? "bg-green-400 scale-125"
+                      ? "bg-[#2563EB] scale-125"
                       : "bg-gray-500 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}

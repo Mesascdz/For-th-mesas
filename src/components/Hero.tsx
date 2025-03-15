@@ -3,7 +3,7 @@ import { ChevronDown, Truck, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-24">
+    <section className="bg-gray-900 bg-gradient-to-b to-black text-white py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto" data-aos="fade-up">
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -18,8 +18,8 @@ export default function Hero() {
 
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
-                  <div className="bg-white/20 p-1 rounded-full mt-1 mr-3">
-                    <ArrowRight size={16} />
+                  <div className="bg-gray-700 p-1 rounded-full mt-1 mr-3">
+                    <ArrowRight size={16} className="text-white" />
                   </div>
                   <p className="text-lg">
                     <span className="font-semibold">Who We Are:</span> Leading
@@ -27,8 +27,8 @@ export default function Hero() {
                   </p>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-white/20 p-1 rounded-full mt-1 mr-3">
-                    <ArrowRight size={16} />
+                  <div className="bg-gray-700 p-1 rounded-full mt-1 mr-3">
+                    <ArrowRight size={16} className="text-white" />
                   </div>
                   <p className="text-lg">
                     <span className="font-semibold">What We Do:</span> Connect
@@ -36,8 +36,8 @@ export default function Hero() {
                   </p>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-white/20 p-1 rounded-full mt-1 mr-3">
-                    <ArrowRight size={16} />
+                  <div className="bg-gray-700 p-1 rounded-full mt-1 mr-3">
+                    <ArrowRight size={16} className="text-white" />
                   </div>
                   <p className="text-lg">
                     <span className="font-semibold">Our Services:</span>{" "}
@@ -48,7 +48,7 @@ export default function Hero() {
               </ul>
 
               <div className="flex space-x-4">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300 shadow-lg">
+                <button className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-300 transition duration-300 shadow-lg border border-gray-700">
                   Get Started
                 </button>
                 <button className="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition duration-300">
@@ -63,8 +63,8 @@ export default function Hero() {
               data-aos-delay="200"
             >
               <div className="relative w-64 h-64">
-                <div className="absolute inset-0 bg-white/10 rounded-full animate-pulse"></div>
-                <div className="absolute inset-4 bg-white/20 rounded-full"></div>
+                <div className="absolute inset-0 bg-gray-800 rounded-full animate-pulse"></div>
+                <div className="absolute inset-4 bg-gray-700 rounded-full"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Truck size={80} className="text-white" />
                 </div>
@@ -73,7 +73,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-16 animate-bounce text-center">
-            <ChevronDown size={32} className="mx-auto" />
+            <ChevronDown size={32} className="mx-auto text-gray-400" />
           </div>
         </div>
       </div>
