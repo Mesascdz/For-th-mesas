@@ -33,8 +33,8 @@ export default function Header() {
           <Link href="/services" className="hover:text-gray-400 transition">
             Services
           </Link>
-          <Link href="/location" className="hover:text-gray-400 transition">
-            Location
+          <Link href="/blog" className="hover:text-gray-400 transition">
+            Blog
           </Link>
           <Link href="/contacts" className="hover:text-gray-400 transition">
             Contacts
