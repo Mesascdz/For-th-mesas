@@ -33,12 +33,9 @@ To run the project locally, follow these steps:
 
 The application should now be available at `http://localhost:3000`.
 
-## Contribution
+## Project Status
 
-Contributions are welcome! Here’s how you can contribute:
-- Fork the repository and create a new branch.
-- Make your improvements or add new features.
-- Open a pull request with a clear description of your changes.
+This project is temporarily open-source for development and feedback purposes. Future updates may transition it to a closed-source model. Suggestions and feedback are welcome!
 
 ## Deployment
 
