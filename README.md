@@ -35,7 +35,7 @@ The application should now be available at `http://localhost:3000`.
 
 ## Project Status
 
-This project is temporarily open-source for development and feedback purposes. Future updates may transition it to a closed-source model. Suggestions and feedback are welcome!
+This project is temporarily open-source for development and feedback purposes. Future updates may transition it to a closed-source model.
 
 ## Deployment
 
