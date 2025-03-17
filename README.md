@@ -1,7 +1,5 @@
 # For-th
 
-![For-th](https://for-th.vercel.app/og-image.png)
-
 ## Overview
 For-th is a web application built using modern frontend technologies, designed to provide a seamless and interactive user experience.
 
